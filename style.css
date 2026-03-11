@@ -167,7 +167,7 @@ main{
 	position: relative;
 	margin: 90px auto 0;
 	color: black;
-	background-image: url("./images/background.png");
+	background-image: url("../images/background.png");
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: 100%;
@@ -303,3 +303,4 @@ footer small{
 	}
 
 }
+
