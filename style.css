@@ -121,10 +121,19 @@ header a:active{
 	color: white;
 }
 
+#exit{
+	right: 20px; 
+	top: 20px;
+}
+
 #contact-pane button:hover{
 	cursor: pointer;
 	background-color: white;
 	color: black;	
+}
+
+#contact-pane h1{
+	font-size: 3em;
 }
 
 #emailForm{
@@ -271,9 +280,13 @@ button:hover {
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
-
+	overflow: hidden;
+	
 	background-color: rgb(20, 20, 40);
 	color: white;
+}
+#featured h1{
+	min-width: 0;
 }
 
 .scroll-container{
@@ -282,6 +295,10 @@ button:hover {
 	overflow: hidden; /* Hide the scrollbar and extra content */
 	width: 100%;
 	white-space: nowrap; /* Prevent items from wrapping to the next line */
+}
+
+.scroll-container h1{
+	white-space: normal;
 }
 
 .scroll-content{
@@ -427,6 +444,16 @@ footer small{
 /* Adjustments for Phones */
 @media only screen and (max-width: 768px)
 {
+	#exit{
+		transform: scale(0.7);
+		top: 5px;
+		right: 5px;
+	}
+	
+	#contact-pane h1{
+		font-size: 2em;
+	}
+	
 	h1{
 		font-size: 1.5em;
 	}
