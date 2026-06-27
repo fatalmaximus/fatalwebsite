@@ -121,7 +121,7 @@ header a:active{
 	color: white;
 }
 
-#exit{
+#exitButton{
 	transform: scale(1.0);
 	top: 20px;
 	right: 20px;
@@ -447,7 +447,7 @@ footer small{
 /* Adjustments for Phones */
 @media only screen and (max-width: 768px)
 {
-	#exit{
+	#exitButton{
 
 		top: 10px;
 		right: 10px;
