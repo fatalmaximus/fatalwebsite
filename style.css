@@ -122,8 +122,9 @@ header a:active{
 }
 
 #exit{
-	right: 20px; 
+	transform: scale(1.0);
 	top: 20px;
+	right: 20px;
 }
 
 #contact-pane button:hover{
