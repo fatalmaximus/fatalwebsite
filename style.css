@@ -230,7 +230,7 @@ button:hover {
 
 #banner h1{
 	position: absolute;
-	top: 90px;
+	top: 50px;
 	left: 3%;
 	z-index: 1;
 	color: white;
@@ -240,7 +240,7 @@ button:hover {
 #banner button{
 	font-family: "Caladea", serif;
 	position: absolute;
-	top: 500px;
+	top: 540px;
 	left: 3%;
 	z-index: 1;
 	color: rgb(10, 10, 20);
