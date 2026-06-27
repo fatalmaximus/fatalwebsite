@@ -3,160 +3,70 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-		<meta name="description" content="Home page of Max's portfolio">
-		<title>Fatal: Home</title>
-
-		
-		<link rel="stylesheet" href="style.css">
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		
-		<script>
-			function toggleContact(vis){
-				if(vis=="false"){
-					$("#contact-pane").animate({bottom:"-100%"},500,"swing", () => {
-						$("#contact-pane").css("display", "none");
-					});
-				}
-				else{
-					$("#contact-pane").css("display", "block");
-					$("#contact-pane").animate({bottom:"0px"},500,"swing");
-				}
-			}
-		</script>
-		
+		<meta name="description" content="Catalog page of Max's clothes">
+		<title>Fatal: Catalog</title>
+		<link rel="stylesheet" href="../style.css">
 	</head>
 	<body>
 		<header>
 			<div class="nav">
-				<a href="#portfolio" class="floatLeft">portfolio</a>
-				<a href="clothes/" class="floatRight">clothes</a>
+				<a href="../home/" class="floatLeft">home</a>
+				<a href="#catalog" class="floatRight">catalog</a>
 				<div id="title">
-					<img src="images/fatal.png" alt="logo" height="294px" width="297px" class="logo">
+					<img src="../images/fatal.png" alt="logo" height="294px" width="297px" class="logo">
 					<h1>FATAL MAXIMUS</h1>
 				</div>
 			</div>
 		</header>
 		
-		
-		<div id="contact-pane">
-			<h1 style="color:white;">Contact Me</h1>
-			<button id="exitButton" onclick="toggleContact('false')">X</button>
-			<form  action="https://formspree.io/f/mwvygrlk" method="POST" id="emailForm">
-				<p>Your Name</p>
-				<input required name="name" placeholder="Enter Name"></input>
-				<p>Your Email</p>
-				<input required type="email" name="email" placeholder="Enter Email"></input>
-				<p>Your Message</p>
-				<textarea required name="message" placeholder="Enter Message"></textarea>
-				<button type="submit">Send Message</button>
-			</form>
-			
-		</div>
-		
-		
 		<main>
-			<div class="center" style="padding-top:50px;">
-				<img src="images/face.png" alt="picture of Max Miller" height="350px" width="350px" style="border-radius:100%; border: 2px solid black" />
-				<div style="background-color:rgba(255,255,255,0.5);">
-					<h1>Hey, I'm Max Miller.</h1>
-					<p>Here you can check out my projects.</p>
-					<p>Whether that be coding and design related like below,</p>
-					<p>or like clothes and fashion <a href="clothes/index.html">here</a>.</p>
-					<p>Whatever it is, I put my heart into the craft.</p>
-					<button onclick="toggleContact('true')" style="margin-top: 60px;">Contact Me</button>
-				</div>
+			<div id="banner">
+				<h1>Welcome</h1>
+				<p>Life is all about the pursuit of something greater, we make clothes for those people.</p>
+				<a href="#catalog"><button>VIEW CATALOG</button></a>
+				<img id="heroImg" src="../images/friend.jpg">
 			</div>
-			
-			<div id="portfolio" style="margin-top:100px;"></div>
-			<div class="scroll-container">
-				<h1 style="color:white;">PROGRAMMING LANGUAGES</h1>
-				<div class="scroll-content">
-					<p>HTML</p>
-					<p>CSS</p>
-					<p>JavaScript</p>
-					<p>Java</p>
-					<p>Python</p>
-					<p>GDScript</p>
-					<p>C</p>
-					<p>C++</p>
-					<p>HTML</p>
-					<p>CSS</p>
-					<p>JavaScript</p>
-					<p>Java</p>
-					<p>Python</p>
-					<p>GDScript</p>
-					<p>C</p>
-					<p>C++</p>
-				</div>
+			<div id="catalog">
+				<hr/>
 			</div>
-			<div id="featured">
-				<h1>FEATURED PROJECTS</h1>
-				<div style="display: flex; flex-direction: row; gap: 60px; justify-content: center;">
-					<img class="fproject" src="images/ironIngame.png" height="150px" />
-					<a href="https://fatal-maximus.itch.io/kenji" target="_blank"><img class="fproject" src="images/kenjiIngame.png" height="150px" /></a>
-				</div>
-				<div class="center" style="display: flex; flex-direction: row; gap: 60px; justify-content: center; margin: auto;">
-					<p>Iron Control<br>
-					is a top-down shooter with<br>
-					territory control.
-					</p>
-					<p>Kenji: Unleash Guts<br>
-					is a hack and slash game with <br>
-					emphasize on parrying.</p>
-				</div>
+			<div id="products">
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/barbedpants.png" width="300px" height="300px" /></a>
+					<p>barbed wire light blue jeans</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/camohat.png" width="300px" height="300px" /></a>
+					<p>riddled camo hat</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/m65.png" width="300px" height="300px" /></a>
+					<p>cropped m65 field jacket</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/patched.png" width="300px" height="300px" /></a>
+					<p>patchwork military pants</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/tiger.png" width="300px" height="300px" /></a>
+					<p>bleached brown flare jeans</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/jacket.png" width="300px" height="300px" /></a>
+					<p>strapped m51 field jacket</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/wingedback.png" width="300px" height="300px" /></a>
+					<p>devil wings t-shirt</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/frontwax.png" width="300px" height="300px" /></a>
+					<p>waxed black lace-up jeans</p>
+				</section>
+				<section class="product">
+					<a href="https://www.depop.com/fatalmaximus/" target="_blank"><img src="../images/shorts.png" width="300px" height="300px" /></a>
+					<p>baggy camo shorts</p>
+				</section>
 			</div>
-
-			
-			<h1 style="margin-top:50px; margin-bottom: 50px; background-color:rgba(255,255,255,0.75); font-size: 2.5em;">ALL PROJECTS</h1>
-			<div id="projects" style="margin-bottom: 250px;">
-				<div class="project-container">
-					<img class="project" src="images/ironMenu.png" width="300px" />
-					<p>Iron Control<br>
-					is a top-down shooter with<br>
-					territory control.<br>
-					Currently in development.<br>
-					Made with Godot.
-					</p>
-				</div>
-				<div class="project-container">
-					<a href="https://fatal-maximus.itch.io/kenji" target="_blank"><img class="project" src="images/kenjiMenu.png" width="300px" /></a>
-					<p>Kenji: Unleash Guts<br>
-					is a hack and slash game with <br>
-					emphasize on parrying.<br>
-					Made with Godot.</p>
-				</div>
-				<div class="project-container">
-					<a href="https://fatal-maximus.itch.io/manicius" target="_blank"><img class="project" src="images/manicius.png" width="300px" /></a>
-					<p>Manicius<br>
-					is a rougelike platformer.<br>
-					I had to create a level editor for the game.<br>
-					Made with Python.</p>
-				</div>
-				<div class="project-container">
-					<a href="https://fatal-maximus.itch.io/adrenaline" target="_blank"><img class="project" src="images/adrenaline.png" width="300px" /></a>
-					<p>Adrenaline<br>
-					is a down shooter made for a <a href="https://itch.io/jam/gdb-juice-jam/rate/1348911" target="_blank" >game jam</a>.<br>
-					Ranked #40 overall and #16 in theme.
-					Made with Godot.</p>
-				</div>
-				<div class="project-container">
-					<a href="https://fatal-maximus.itch.io/kilstrom" target="_blank"><img class="project" src="images/kilstrom.png" width="300px" /></a>
-					<p>Kilstrom<br>
-					is a dogfighting space game.<br>
-					You can also create your own trade routes.<br>
-					Made with Python.</p>
-				</div>
-				<div class="project-container">
-					<a href="https://fatal-maximus.itch.io/lacrimosa" target="_blank"><img class="project" src="images/lacrimosa.png" width="300px" /></a>
-					<p>Lacrimosa<br>
-					is a top down shooter with horror elements.<br>
-					Made for a <a href="https://itch.io/jam/themed-horror-game-jam-10/rate/1807584" target="_blank">game jam</a>.<br>
-					Ranked #9 overall and #5 in gameplay.
-					Made with Godot.</p>
-				</div>
-			</div>
-			
 		</main>
 		
 		<footer>
@@ -166,4 +76,5 @@
 			</ul>
 		</footer>
 	</body>
+	
 </html>
