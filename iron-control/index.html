@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+		<meta name="description" content="Showcase of the game Iron Control">
+		<title>Fatal: Iron Control</title>
+
+		
+		<link rel="stylesheet" href="../style.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		
+		<script>
+			function toggleContact(vis){
+				if(vis=="false"){
+					$("#contact-pane").animate({bottom:"-100%"},500,"swing", () => {
+						$("#contact-pane").css("display", "none");
+					});
+				}
+				else{
+					$("#contact-pane").css("display", "block");
+					$("#contact-pane").animate({bottom:"0px"},500,"swing");
+				}
+			}
+		</script>
+		
+	</head>
+	<body>
+		<header>
+			<div class="nav">
+				<a href="../home/" class="floatLeft">home</a>
+				<a href="../clothes/" class="floatRight">clothes</a>
+				<div id="title">
+					<img src="../images/fatal.png" alt="logo" height="294px" width="297px" class="logo">
+					<h1>FATAL MAXIMUS</h1>
+				</div>
+			</div>
+		</header>
+		
+		
+		<div id="contact-pane">
+			<h1 style="color:white;">Contact Me</h1>
+			<button id="exitButton" onclick="toggleContact('false')">X</button>
+			<form  action="https://formspree.io/f/mwvygrlk" method="POST" id="emailForm">
+				<p>Your Name</p>
+				<input required name="name" placeholder="Enter Name"></input>
+				<p>Your Email</p>
+				<input required type="email" name="email" placeholder="Enter Email"></input>
+				<p>Your Message</p>
+				<textarea required name="message" placeholder="Enter Message"></textarea>
+				<button type="submit">Send Message</button>
+			</form>
+			
+		</div>
+		
+		
+		<main>
+			<div class="center" style="padding-top:50px;">
+				<div style="position:absolute; top:0px; background-image: url('../images/banner.png');  width:100%; height:50vh; background-size:cover; background-position: center; background-repeat: no-repeat; "></div>
+				<div style="margin-top: 550px; margin-bottom:100px; background-color:rgba(255,255,255,0.5);">
+					<h1>Iron Control</h1>
+					<p>is a top down shooter where you play as a mercenary.</p>
+					<p>Whether that be the sabotage and destruction of rivals,</p>
+					<p>or defending a government official.</p>
+					<p>You get to choose what contracts you take.</p>
+					<br/>
+					<p>Made in godot.</p>
+					
+				</div>
+			</div>
+			
+			<div id="featured" style="height:100px; margin-bottom: 100px;">
+				<h1>FEATURED PHOTOS</h1>
+			</div>
+
+			
+			<div id="projects" style="margin-bottom: 250px;">
+				<div class="project-container" style="height: 200px;">
+					<img class="project" src="../images/ironMenu.png" width="300px" />
+					<p class="center">Title Screen</p>
+				</div>
+				<div class="project-container" style="height: 200px;">
+					<img class="project" src="../images/gameplay.png" width="300px" />
+					<p class="center">Gunfights</p>
+				</div>
+				<div class="project-container" style="height: 200px;">
+					<img class="project" src="../images/implants.png" width="300px" />
+					<p class="center">Customize your build</p>
+				</div>
+				<div class="project-container" style="height: 200px;">
+					<img class="project" src="../images/companies.png" width="300px" />
+					<p class="center">Choose who you work for</p>
+				</div>
+				<div class="project-container" style="height: 200px;">
+					<img class="project" src="../images/stealth.png" width="300px" />
+					<p class="center">Light stealth elements</p>
+				</div>
+				<div class="project-container" style="height: 200px;">
+					<img class="project" src="../images/day.png" width="300px" />
+					<p class="center">Time and weather can change</p>
+				</div>
+			</div>
+			
+		</main>
+		
+		<footer>
+			<ul>
+				<li><small>real people made this.</small></li>
+				<li><small>&copy; Max Miller. All rights reserved.</small></li>
+			</ul>
+		</footer>
+	</body>
+</html>
