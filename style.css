@@ -101,79 +101,17 @@ header a:active{
 	margin: auto 0;
 }
 
-#contact-pane{
-	width: 90%;
-	height: 80%;
-	position: fixed;
-	margin: 0 5%;
-	overflow-y: auto !important;
-	z-index: 5;
-	background-color: rgb(20, 20, 40);
-	color: white;
-	border: 2px solid black;
-	bottom: -100%;
-	display: none;
-}
 
-#contact-pane button{
-	background-color: rgb(20, 20, 40);
-	border: 2px solid white;
-	color: white;
+#emailText{
+	color: rgb(245,123,32);
+	transition: color 0.25s;
+	text-decoration: underline;
 }
-
-#exitButton{
-	transform: scale(1.0);
-	top: 20px;
-	right: 20px;
-	position: absolute; 
-	padding: 10px 20px;
+#emailText:hover{
+	color: rgb(255,140,50);
 }
-
-#contact-pane button:hover{
-	cursor: pointer;
-	background-color: white;
-	color: black;	
-}
-
-#contact-pane h1{
-	font-size: 3em;
-}
-
-#emailForm{
-	font-family: "Spline Sans Mono", monospace;
-	font-weight: bold;
-	font-size: 1.5em;
-	display: flex;
-	flex-direction: column;
-}
-
-#emailForm p{
-	margin: 0 5%;
-}
-
-#emailForm input{
-	font-family: "Spline Sans Mono", monospace;
-	width: 90%;
-	margin: 10px auto;
-	padding: 10px;
-	font-size: 1.5rem;
-}
-
-#emailForm textarea{
-	font-family: "Spline Sans Mono", monospace;
-	width: 90%;
-	height: 250px;
-	margin: 10px auto;
-	padding: 10px;
-	font-size: 1.5rem;
-	resize: vertical;
-}
-
-#emailForm button{
-	margin: 10px auto;
-	padding: 10px;
-	font-size: 1.5rem;
-	align-self: left;
+#emailText:active{
+	color: rgb(220,105,15);
 }
 
 #title{
@@ -196,10 +134,8 @@ main{
 	position: relative;
 	margin: 70px auto 0;
 	color: black;
-	background-image: url("images/background.png");
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: 100%;
+	background: #E7F6F3;
+	background: linear-gradient(135deg,rgba(231, 246, 243, 1) 0%, rgba(243, 250, 230, 1) 100%);
 	min-height: 90vh;
 }
 
@@ -285,7 +221,7 @@ button:hover {
 	justify-content: center;
 	overflow: hidden;
 	
-	background-color: rgb(20, 20, 40);
+	background-color: rgba(52, 52, 105, 1);
 	color: white;
 }
 #featured h1{
@@ -293,8 +229,8 @@ button:hover {
 }
 
 .scroll-container{
-	color: #0a84df;
-	background-image: linear-gradient(180deg, rgba(50, 50, 140, 1), rgba(20, 20, 40, 1));
+	background: #9999FF;
+	background: linear-gradient(180deg, rgba(153, 153, 255, 1) 0%, rgba(52, 52, 105, 1) 100%);
 	overflow: hidden; /* Hide the scrollbar and extra content */
 	width: 100%;
 	white-space: nowrap; /* Prevent items from wrapping to the next line */
@@ -316,6 +252,7 @@ button:hover {
 	width: 200px; /* Adjust based on your needs */
 	padding: 18px;
 	font-weight: bold;
+	color: white;
 }
 
 @keyframes scroll-left {
@@ -335,10 +272,11 @@ button:hover {
 }
 
 .project-container{
-	border: 2px solid black; 
+	border: 2px solid #9999FF; 
 	height:300px; 
 	width: 300px; 
 	background-color: white;
+	box-shadow: 5px 5px 15px;
 }
 
 .project-container p{
@@ -349,11 +287,13 @@ button:hover {
 
 .project {
 	transition: transform 0.5s;
+	border-bottom: 2px solid #9999FF;
 }
 
 .project:hover {
 	transform: scale(1.5);
 	z-index: 1;
+	border: 2px solid #9999FF;
 }
 
 .fproject {

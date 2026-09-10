@@ -12,16 +12,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		
 		<script>
-			function toggleContact(vis){
-				if(vis=="false"){
-					$("#contact-pane").animate({bottom:"-100%"},500,"swing", () => {
-						$("#contact-pane").css("display", "none");
-					});
-				}
-				else{
-					$("#contact-pane").css("display", "block");
-					$("#contact-pane").animate({bottom:"0px"},500,"swing");
-				}
+			function copyDirectEmail(emailString) {
+				navigator.clipboard.writeText(emailString).then(() => {
+					alert("Copied email: " + emailString);
+				});
 			}
 		</script>
 		
@@ -39,36 +33,27 @@
 		</header>
 		
 		
-		<div id="contact-pane">
-			<h1 style="color:white;">Contact Me</h1>
-			<button id="exitButton" onclick="toggleContact('false')">X</button>
-			<form  action="https://formspree.io/f/mwvygrlk" method="POST" id="emailForm">
-				<p>Your Name</p>
-				<input required name="name" placeholder="Enter Name"></input>
-				<p>Your Email</p>
-				<input required type="email" name="email" placeholder="Enter Email"></input>
-				<p>Your Message</p>
-				<textarea required name="message" placeholder="Enter Message"></textarea>
-				<button type="submit">Send Message</button>
-			</form>
-			
-		</div>
-		
-		
 		<main>
-			<div class="center" style="padding-top:50px;">
-				<img src="../images/face.png" alt="picture of Max Miller" height="350px" width="350px" style="border-radius:100%; border: 2px solid black" />
-				<div style="background-color:rgba(255,255,255,0.5);">
-					<h1>Hey, I'm Max Miller.</h1>
+			<div class="center" style="padding-top:20vh; margin-bottom:50vh;">
+				<div>
+					<h1>Max Miller | Computer Programmer | Artist</h1>
+					<br>
+					<p>I have been invested in programming for about seven years,</p>
+					<p>two of which were working on my associates degree in Computer Programming.</p>
+					<p>Half of the fun is finding solutions to problems, </p>
+					<p>the other half is when you finish.</p>
+					<br>
 					<p>Here you can check out my projects.</p>
-					<p>Whether that be coding and design related like below,</p>
+					<p>Whether that be mainly game development like below,</p>
 					<p>or like clothes and fashion <a href="../clothes/">here</a>.</p>
-					<p>Whatever it is, I put my heart into the craft.</p>
-					<button onclick="toggleContact('true')" style="margin-top: 60px;">Contact Me</button>
+					<p>I put my heart into the craft.</p>
+					<br>
+	
+					<p>Contact me at <span id="emailText" onclick="copyDirectEmail('maxmiller1779@gmail.com')">maxmiller1779@gmail.com</span></p>
 				</div>
 			</div>
 			
-			<div id="portfolio" style="margin-top:100px;"></div>
+			<div id="portfolio"></div>
 			<div class="scroll-container">
 				<h1 style="color:white;">PROGRAMMING LANGUAGES</h1>
 				<div class="scroll-content">
@@ -108,8 +93,8 @@
 			</div>
 
 			
-			<h1 style="margin-top:50px; margin-bottom: 50px; background-color:rgba(255,255,255,0.75); font-size: 2.5em;">ALL PROJECTS</h1>
-			<div id="projects" style="margin-bottom: 250px;">
+			<h1 style="margin-top:50px; margin-bottom: 50px; font-size: 2.5em;">ALL PROJECTS</h1>
+			<div id="projects" style="padding-bottom: 250px;">
 				<div class="project-container">
 					<a href="../iron-control/"><img class="project" src="../images/ironMenu.png" width="300px" /></a>
 					<p>Iron Control<br>
